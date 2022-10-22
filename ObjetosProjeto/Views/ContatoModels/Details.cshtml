@@ -1,0 +1,79 @@
+﻿@model ObjetosProjeto.Models.ContatoModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ContatoModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dtn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dtn)
+        </dd>
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.endereco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.endereco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn btn-primary" asp-controller="ContatoModel" asp-action="Index" role="button">  Voltar  </a>
+</div>

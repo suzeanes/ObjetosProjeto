@@ -1,0 +1,66 @@
+﻿@model ObjetosProjeto.Models.ObjetoModel
+
+@{
+    ViewData["Title"] = "Achados & Perdidos";
+}
+<p>
+
+</p>
+<h4 class="text-center mt-3">Inclusão de Objetos Achados & Perdidos</h4>
+<hr />
+<br>
+
+<div class="d-flex flex-column  justify-content-center  col-md-4">
+    <form asp-action="Create">
+        <div class="form-group">
+            <p class="labelInputForm">Objeto Encontrado ou Perdido:</p>
+            <select asp-for="AchadoPerdido" asp-items="Html.GetEnumSelectList<ObjetosProjeto.Models.Enums.AchadoPerdido>()"></select>
+        </div>
+       
+
+             <div class="form-group">
+                <label for="text">Qual Objeto foi econtrado ou Perdido?</label>
+               
+                <input asp-for="Objeto" class="form-control" />
+                <span asp-validation-for="Objeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="text">Qual a Marca/Modelo do Objeto?</label>
+                
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="text">Quais os detalhes do Objeto?</label>
+                
+                <input asp-for="Detalhes" class="form-control" />
+                <span asp-validation-for="Detalhes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="text">Onde foi Encontado/ Perdido?</label>
+                
+                <input asp-for="Localizacao" class="form-control" />
+                <span asp-validation-for="Localizacao" class="text-danger"></span>
+            </div>
+    </p>
+   
+    <div class="form-group">
+        <label for="Objeto" class="labelInputForm">Identificação do Usuário</label>
+
+        <input asp-for="ContatoId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Adicionar" class="btn btn-primary" />
+        <a class="btn btn-primary" asp-controller="Contato" asp-action="Index" role="button">  Voltar  </a>
+    </div>
+
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

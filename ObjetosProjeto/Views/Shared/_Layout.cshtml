@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ObjetosProjeto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ObjetosProjeto.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+        
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="~/image/aepazul.png" alt="Logo">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Objetos" asp-action="Index">Achados e Perdidos</a>
+                    </li>                  
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="ContatoModels" asp-action="Index">Usuários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Fale">Fale Conosco</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <a href="./Login/Index">
+                    <img src="~/image/login.png" alt="Login">
+                </a>
+            </div><div class="nav-list">
+            </div>
+        </nav>
+    </header>
+    
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+
+    <footer class="footerDiv d-flex justify-content-center">
+        <ul class="d-flex justify-content-center align-items-center ">
+            
+            <li class="footer-item">
+                <a class="nav-link text-darkblue"><a href="https://portal.sc.senac.br/" target="_blank" class="nav-link">O Senac</a>
+            </li>
+            <li class="footer-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Objetos" asp-action="Create">Encontrei um Objeto</a>
+            </li>
+            <li class="footer-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Objetos" asp-action="Create">Perdi um Objeto</a>
+            </li>
+            <li class="footer-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Fale">Fale Conosco</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

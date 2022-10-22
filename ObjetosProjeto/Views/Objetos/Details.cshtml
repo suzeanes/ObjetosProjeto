@@ -1,0 +1,48 @@
+﻿@model ObjetosProjeto.Models.ObjetoModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObjetoModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AchadoPerdido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Objeto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalhes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detalhes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Localizacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Localizacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contato)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contato.Celular)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    
+</div>
